@@ -178,3 +178,105 @@ export const skillDemand = [
   { month: 'May', ai: 72, cloud: 72, data: 66 },
   { month: 'Jun', ai: 78, cloud: 75, data: 68 },
 ];
+
+// ============ BLOOMBERG TERMINAL DATA ============
+
+export const tickerItems = [
+  { symbol: 'JUNIOR.SDE/BLR', value: -34, type: 'pct' as const },
+  { symbol: 'ML.OPS/BLR', value: 89, type: 'pct' as const },
+  { symbol: 'RISK.SCORE', value: 71, type: 'raw' as const },
+  { symbol: 'MARKET.DEMAND', value: '43/100', type: 'label' as const },
+  { symbol: 'COMPETING.PROFILES', value: '4,247', type: 'label' as const },
+  { symbol: 'DATA.ENG/HYD', value: 67, type: 'pct' as const },
+  { symbol: 'AUTOMATION.INDEX', value: 'HIGH', type: 'label' as const },
+  { symbol: 'CLOUD.ENG/PUN', value: 42, type: 'pct' as const },
+  { symbol: 'SKILL.GAP', value: -28, type: 'pct' as const },
+  { symbol: 'PIVOT.WINDOW', value: '5mo', type: 'label' as const },
+];
+
+export const skillHoldings = [
+  { skill: 'Python', demand: 89, trend: '▲' as const, risk: 'green' as const, weight: 28, sparkline: [72, 78, 82, 89] },
+  { skill: 'SQL', demand: 76, trend: '▼' as const, risk: 'yellow' as const, weight: 22, sparkline: [84, 81, 78, 76] },
+  { skill: 'Excel', demand: 34, trend: '▼▼' as const, risk: 'red' as const, weight: 12, sparkline: [55, 48, 40, 34] },
+  { skill: 'Git', demand: 71, trend: '→' as const, risk: 'green' as const, weight: 18, sparkline: [70, 71, 70, 71] },
+  { skill: 'ETL', demand: 58, trend: '▼' as const, risk: 'yellow' as const, weight: 20, sparkline: [68, 65, 61, 58] },
+];
+
+export const careerValueData = [
+  { month: 'Jan', you: 72, market: 65 },
+  { month: 'Feb', you: 70, market: 66 },
+  { month: 'Mar', you: 68, market: 67 },
+  { month: 'Apr', you: 65, market: 68 },
+  { month: 'May', you: 62, market: 70 },
+  { month: 'Jun', you: 58, market: 71 },
+  { month: 'Jul', you: 55, market: 73 },
+  { month: 'Aug', you: 52, market: 74 },
+  { month: 'Sep', you: 48, market: 76 },
+  { month: 'Oct', you: 45, market: 77 },
+  { month: 'Nov', you: 42, market: 79 },
+  { month: 'Dec', you: 38, market: 80 },
+];
+
+export const roleDemandIndex = [
+  { role: 'ML Eng', demand: 89, growing: true },
+  { role: 'Data Eng', demand: 76, growing: true },
+  { role: 'DevOps', demand: 72, growing: true },
+  { role: 'SDE Jr', demand: 34, growing: false },
+  { role: 'QA Man', demand: 22, growing: false },
+  { role: 'Data Entry', demand: 12, growing: false },
+];
+
+export const riskAnalysisMetrics = [
+  { label: 'AUTOMATION.PROB', value: '71%', color: '#ff3b5c' },
+  { label: 'MARKET.VOLATILITY', value: 'HIGH', color: '#ff9500' },
+  { label: 'SKILL.OBSOLESCENCE', value: '8.2mo', color: '#ff3b5c' },
+  { label: 'DEMAND.RATIO', value: '0.08', color: '#ff3b5c' },
+  { label: 'PIVOT.READINESS', value: '67%', color: '#34d399' },
+  { label: 'SAFETY.SCORE', value: '3.1/10', color: '#ff3b5c' },
+];
+
+export const skillCorrelationMatrix = {
+  skills: ['Python', 'SQL', 'Cloud', 'ML', 'Docker'],
+  data: [
+    [1.0, 0.72, 0.45, 0.68, 0.31],
+    [0.72, 1.0, 0.38, 0.52, 0.22],
+    [0.45, 0.38, 1.0, 0.61, 0.85],
+    [0.68, 0.52, 0.61, 1.0, 0.55],
+    [0.31, 0.22, 0.85, 0.55, 1.0],
+  ],
+};
+
+export const marketVolatility = [
+  { role: 'Prompt Eng', volatility: 92, direction: 'up' as const },
+  { role: 'ML Engineer', volatility: 78, direction: 'up' as const },
+  { role: 'DevOps', volatility: 45, direction: 'up' as const },
+  { role: 'SDE Junior', volatility: 67, direction: 'down' as const },
+  { role: 'QA Manual', volatility: 82, direction: 'down' as const },
+  { role: 'Data Entry', volatility: 95, direction: 'down' as const },
+];
+
+export const pivotSuggestions = [
+  { role: 'ML Engineer', match: 74, salaryDelta: '+₹8L', indicator: 'green' as const },
+  { role: 'Data Analyst', match: 82, salaryDelta: '+₹3L', indicator: 'green' as const },
+  { role: 'Cloud Architect', match: 58, salaryDelta: '+₹14L', indicator: 'yellow' as const },
+];
+
+export const hiringCalendar = {
+  months: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+  intensity: [2, 1, 3, 3, 2, 1, 1, 2, 3, 3, 2, 1] as const, // 1=low/freeze, 2=medium, 3=high
+  events: [
+    { label: 'Q2.HIRING.SEASON', date: 'APR 15' },
+    { label: 'FLIPKART.INTAKE', date: 'MAY 2026' },
+    { label: 'INFOSYS.FREEZE.END', date: 'JUN 2026' },
+  ],
+};
+
+export const newsTicker = [
+  'COGNIZANT: Automation of 8,400 junior roles confirmed Q2 2026',
+  'FLIPKART: ML Ops team expanding — 34 open roles Bangalore',
+  'MARKET: Junior SDE demand index hits 18-month low',
+  'WIPRO: Skills transition program launched for 12,000 engineers',
+  'TCS: Cloud engineering division hiring 2,800 across 6 cities',
+  'AMAZON: AI/ML intern conversion rate drops to 12% from 38%',
+  'INFOSYS: Generative AI practice adds 450 roles in Hyderabad',
+];

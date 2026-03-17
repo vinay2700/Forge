@@ -706,3 +706,120 @@ body::before {
   font-size: 1.125rem;
   color: var(--text);
 }
+
+/* ============ BLOOMBERG TERMINAL ============ */
+
+.terminal-surface {
+  background: linear-gradient(180deg, #0f1120 0%, #0a0c16 100%);
+  border: 1px solid transparent;
+  border-radius: 4px;
+  position: relative;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.03) inset;
+}
+
+.terminal-surface::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 5px;
+  padding: 1px;
+  background: linear-gradient(180deg, #2a2d42 0%, #14172a 100%);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.terminal-ticker {
+  display: flex;
+  width: max-content;
+  animation: ticker-scroll 45s linear infinite;
+}
+
+.terminal-ticker:hover {
+  animation-play-state: paused;
+}
+
+.terminal-news-ticker {
+  display: flex;
+  width: max-content;
+  animation: ticker-scroll 60s linear infinite;
+}
+
+.terminal-news-ticker:hover {
+  animation-play-state: paused;
+}
+
+@keyframes terminal-pulse-green {
+  0%, 100% { opacity: 1; box-shadow: 0 0 4px rgba(52, 211, 153, 0.6); }
+  50% { opacity: 0.4; box-shadow: 0 0 8px rgba(52, 211, 153, 0.3); }
+}
+
+.market-open-dot {
+  animation: terminal-pulse-green 2s ease-in-out infinite;
+}
+
+.terminal-row-hover {
+  transition: background 150ms ease;
+}
+
+.terminal-row-hover:hover {
+  background: #1a1d2e !important;
+}
+
+/* Heatmap cell hover */
+.heatmap-cell {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.heatmap-cell:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 12px rgba(96, 165, 250, 0.3);
+  z-index: 10;
+}
+
+/* ─── FORGE UPLOAD ZONE ─── */
+.forge-upload-zone {
+  border: 2px dashed #1a1d2e;
+  border-radius: 8px;
+  padding: 48px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #0d0f18;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  margin: 0 8px 16px;
+}
+
+.forge-upload-zone:hover {
+  border-color: #f5623a;
+  box-shadow: 0 0 20px rgba(245, 98, 58, 0.08);
+}
+
+.forge-upload-zone--active {
+  border-color: #f5623a;
+  animation: upload-pulse 1s ease-in-out infinite;
+  box-shadow: 0 0 30px rgba(245, 98, 58, 0.15);
+}
+
+@keyframes upload-pulse {
+  0%, 100% { border-color: #f5623a; }
+  50% { border-color: rgba(245, 98, 58, 0.4); }
+}
+
+/* ─── FORGE LOADING OVERLAY ─── */
+.forge-loading-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(8, 9, 13, 0.95);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.forge-blink {
+  animation: blink 0.8s step-end infinite;
+}
